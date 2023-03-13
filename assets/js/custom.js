@@ -58,7 +58,7 @@ const aboutobserver = new IntersectionObserver(entries => {
 
 aboutobserver.observe(document.querySelector('.about-section-header'));
 
-VanillaTilt.init(document.querySelector(".service-img"), {
+/*VanillaTilt.init(document.querySelector(".service-img"), {
 	max: 15,
 	speed: 400
-});
+});*/

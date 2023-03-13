@@ -51,6 +51,7 @@ window.addEventListener("resize", () => {
 	renderer.setSize( canvaswidth, canvasheight );
 });
 
+
 const loop = () => {
 	controls.update();
 	renderer.render(scene, camera);
