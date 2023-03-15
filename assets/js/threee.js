@@ -5,15 +5,15 @@ const scene = new THREE.Scene();
 var canvas = document.getElementById("mycanvas");
 var canvaswidth = canvas.clientWidth;
 var canvasheight = canvas.clientHeight;
-
+const color = new THREE.Color("rgb(16, 30, 39)");
 const renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true});
 renderer.setSize( canvaswidth, canvasheight );
 
-const light1 = new THREE.PointLight(0xffffff, 2, 100, 5);
+const light1 = new THREE.PointLight(color, 5, 100, 2);
 light1.position.set(10, 10, 10);
 scene.add(light1);
 
-const light2 = new THREE.PointLight(0xffffff, 1, 100, 5);
+const light2 = new THREE.PointLight(0xffffff, 2, 100, 5);
 light2.position.set(-10, -10, -10);
 scene.add(light2);
 
@@ -23,7 +23,7 @@ camera.position.z = 9;
 const texture = new THREE.TextureLoader().load('./assets/images/moon_texture_2.jpg');
 
 const geometry = new THREE.SphereGeometry(3, 64, 64 );
-const material = new THREE.MeshStandardMaterial( {
+const material = new THREE.MeshPhongMaterial( {
  color: 0x008080,
  map: texture
 } );
@@ -38,7 +38,7 @@ controls.enableDamping = true;
 controls.enablePan = false;
 controls.enableZoom = false;
 controls.autoRotate = true;
-controls.autoRotateSpeed = 4;
+controls.autoRotateSpeed = 2;
 
 window.addEventListener("resize", () => {
 	const canvas = document.getElementById("mycanvas");

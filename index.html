@@ -6,7 +6,11 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+	<link rel="stylesheet" href="assets/bootstrap-icons-1.10.3/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/aos.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -46,7 +50,7 @@
 			<div class="row banner-contents pt-5">
 				<div class="col-lg-6 mt-5">
 					<div class="header-text">
-						<h3 class="title"><span>Elevate Your Digital Brand</span></h3>
+						<h3 class="title" data-aos="fade-up" data-aos-duration="1000"><span>Elevate Your Digital Brand</span></h3>
 						<h1 class="subtitle">Stand Out In Your<br><span>Digital Crowd</span></h1>
 					</div>
 				</div>
@@ -155,15 +159,79 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="about-section-header p-2 mb-2">
-						<h3 class="about-title">Your Reliable Guide<br>in Online World</h3>
+						<h3 class="about-title">How We Do It_</h3>
+						<h4 class="about-subtitle">Elevate your brand in 3 easy steps</h4>
 					</div>
-					<h1 class="bg_strock_text" data-parallax='{"x": 150}'>About</h1>
-					<p class="about-text pt-3">We are tealQ, a business-to-business (B2B) digital marketing company that offers web design, search engine optimization (SEO), content creation (content writing), and affiliate marketing promotion services. The main goal of our business is to build long-term relationships with our customers by giving them excellent service in the digital world. 
-					</p>
 				</div>
-				<!-- <div class="col-lg-4">
-					<img class="about-img pt-2" src="assets/images/3.png">
-				</div> -->
+			
+			<!-- <h1 class="bg_strock_text" data-parallax='{"x": 150}'>About</h1> -->
+			<!-- <p class="about-text pt-3">We are tealQ, a business-to-business (B2B) digital marketing company that offers web design, search engine optimization (SEO), content creation (content writing), and affiliate marketing promotion services. The main goal of our business is to build long-term relationships with our customers by giving them excellent service in the digital world. 
+			</p> -->
+			</div>
+
+			<!-- <div class="row">
+				<div class="col-md-2">
+					<h3 class="number-icon"><i class="bi bi-1-square"></i></h3>
+				</div>
+				<div class="col-md-6">
+					<h3 class="text-title pt-2">Research & Development</h3>
+					<p class="text-desc">We carefully research your brand identity in contrast with your industry and competitors to create a Master Plan.</p>
+				</div>
+				<div class="col-md-4">
+					<img class="how-we-img" src="assets/images/laboratory-testing.png">
+				</div>
+			</div> -->
+
+			<div class="row how-we-do-it">
+				<div class="col-md-4 contentContainer">
+					<div class="imgbx">
+						<img class="how-we-img" src="assets/images/portfolio_img_1.jpg">
+					</div>
+					<div class="contentbx" data-aos="fade-in" data-aos-duration="1000">
+						<h3 class="number-icon"><i class="bi bi-1-square"></i> Research & Development</h3>
+						<p class="text-desc">We carefully research your brand identity in contrast with your industry and competitors to create a Master Plan.</p>
+					</div>
+				</div>
+				<div class="col-md-4 contentContainer">
+					<div class="imgbx">
+						<img class="how-we-img" src="assets/images/portfolio_img_1.jpg">
+					</div>
+					<div class="contentbx" data-aos="fade-in" data-aos-duration="1000">
+						<h3 class="number-icon"><i class="bi bi-1-square"></i> Research & Development</h3>
+						<p class="text-desc">We carefully research your brand identity in contrast with your industry and competitors to create a Master Plan.</p>
+					</div>
+				</div>
+				<div class="col-md-4 contentContainer">
+					<div class="imgbx">
+						<img class="how-we-img" src="assets/images/portfolio_img_1.jpg">
+					</div>
+					<div class="contentbx" data-aos="fade-in" data-aos-duration="1000">
+						<h3 class="number-icon"><i class="bi bi-1-square"></i> Research & Development</h3>
+						<p class="text-desc">We carefully research your brand identity in contrast with your industry and competitors to create a Master Plan.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section id="call-to-action" class="call-to-action p-5 mb-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="action-text">
+						<h3 class="small-text">Let's talk <br> about your</h3>
+						<h3 class="large-text" data-aos="flip-up" data-aos-duration="1000">growth!</h3>
+					</div>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="action-btn">
+						<button>Connect</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -177,12 +245,18 @@
 <script src="assets/js/particles.js"></script>
 <script src="assets/js/parallax-scroll.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/aos.js"></script>
 <script type="text/javascript" src="assets/js/vanilla-tilt.js"></script>
 
 <script type="text/javascript">
+	AOS.init();
 	VanillaTilt.init(document.querySelectorAll(".service-item"), {
 	max: 6,
-	speed: 400
+	speed: 100
+});
+	VanillaTilt.init(document.querySelectorAll(".contentContainer"), {
+	max: 6,
+	speed: 100
 });
 </script>
 <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
